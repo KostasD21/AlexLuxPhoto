@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact - Alexander Lux Photography</title>
+<link rel="shortcut icon" href="../assets/img/faviconMB.png">
+
+<link href="../style.css" rel="stylesheet" type="text/css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<style>
+
+
+	::-moz-selection {	
+    	background: blue;
+    	color: white;
+    	text-shadow: none;
+	}
+
+	::selection {			
+    	background: blue;
+    	color: white;
+    	text-shadow: none;
+	}
+	
+	
+	
+	
+	
+	#mainContainer {
+		-webkit-font-smoothing: antialiased;
+		-webkit-overflow-scrolling: touch;
+		background:#FFFFFF;
+		background-color:#FFFFFF;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	.sidebar nav ul li a{
+		color: #000000;
+	}	
+
+	.sidebar nav ul li a:hover{
+		color:#C5C5C5;
+	}
+	
+	#imageWrapper {
+		max-width: 1200px;
+		max-height: 800px;
+		width: 50%;
+		position: relative;
+		display: inline-block;	
+		margin-left: 0px;
+		float:left;
+	}
+	
+	
+	
+	h1{
+		text-align: center;
+		width: 100%;
+		font-weight: 300;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+		font-size: 22px;
+		text-decoration: none;
+		font-style: normal;
+		color: black;
+		background-color: white;	
+	}
+	
+	hr.symbol {
+
+    padding: 0;
+
+    border: none;
+
+    border-top: medium double #333;
+
+    color: #333;
+
+    text-align: center;
+
+}
+
+hr.symbol:after {
+
+    content: "§";
+
+    display: inline-block;
+
+    position: relative;
+
+    top: -0.7em;
+
+    font-size: 1.5em;
+
+    padding: 0 0.25em;
+
+    background: white;
+
+}
+
+.contact_info{
+	text-indent: 2.5%;
+	text-align: center;	
+}
+
+#info{
+	display:inline;
+	width: 48%;
+	position: relative;
+	top:0px;
+	left:0px;
+	margin-left: 2%;
+	float:left;	
+}
+	
+#info a{
+	width:8%;
+	margin: auto;
+	display: block;	
+}
+	
+#info img{
+	margin: auto;
+	display: block;	
+}
+
+#mainContainer footer {
+	width:100%;
+	position:absolute;
+	bottom:1%;
+	float:left;
+	text-align:center;
+}
+
+.footer>small {
+    font-family: 'Campton Web',Helvetica,sans-serif;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-align: center;
+	font-size: 0.6em;
+}
+
+footer a {
+	cursor:pointer;	
+}
+
+
+/*------Media------*/
+	@media screen and (max-width:1190px) {
+		#mainContainer footer {
+			width:100%;
+			position:relative;
+			float:left;
+			text-align:center;
+			margin-top:20%;
+		}
+		
+		
+	}
+
+
+	@media screen and (max-width:635px) {
+		#info{
+			margin-top:-3%;
+		}
+		
+		#info a{
+			width:10%;
+		}
+	}
+	
+	@media screen and (max-width:570px) {
+	
+		#imageWrapper {
+		width: 99%;
+		}
+		
+		.contact_info{
+			text-align: center;	
+		}
+		
+		#info{
+			width: 96%;
+			margin-right:2%;
+			margin-top:0%;
+		}
+		
+		#info a{
+			width:8%;
+		}
+	}
+	
+	@media screen and (min-height:875px) {
+		#mainContainer footer {
+			width:100%;
+			position:absolute;
+			bottom:1%;
+			float:left;
+			text-align:center;
+		}
+	}
+	
+</style>
+
+
+
+</head>
+
+
+
+
+
+
+<body onload="loadFunc()">
+
+<div id="mainContainer">
+	<div class="sidebar"> 
+    	<header id="logo">
+        	<a href="../">
+            	<img src="../assets/img/logoSegoeB.png" alt="Alexander Lux Photography">
+            </a>
+        </header>
+        <hr id="horizontal_line">
+        
+        <nav>
+        	<ul>
+            	<li><a href="../portfolio/">PORTFOLIO</a></li>
+            	<li><a href="../about/">ABOUT</a></li>
+            	<li><a href="#" class="active">CONTACT</a></li>
+          	</ul>
+        </nav>
+
+  </div>
+  
+  
+  <!--Navigation Box-->
+    <div class="navigation_menu_bar">     
+        <div class="navigation_menu"><a href="#" class="active">CONTACT</a></div>
+    </div>
+  
+  
+  
+<div id="maincontent">
+      
+    <div id="imageWrapper">  
+    	<img src="../assets/img/contact.jpg" alt="Alexander Lux Photography" width="100%">
+    </div>
+        
+        
+    <div id="info">    
+        <h1>Alexander Lux</h1>
+        <hr class="symbol" width="95%">
+        <p class="contact_info">Phone: 0403294213941</p>
+        <p class="contact_info"><b>info@alexanderluxphotography.com</b></p>
+        <a href="https://www.facebook.com/alexander.lux.31" target="_blank"><img src="../assets/img/fb-icon.png" alt="facebook" width="100%"/></a>
+	</div>
+    
+</div>
+
+
+<footer><small>© Alexander Lux Photography 2015 - <i>Design & Code</i> by <b><a title="kdmortal@gmail.com">K</a></b>'n'<b><a title="grg.mrkks@gmail.com">G</a></b></small></footer>
+
+</div>
+
+
+
+<script>
+	function loadFunc(){
+		var element = document.getElementById('mainContainer');
+		console.log(element);
+		element.style.opacity = "1";
+		element.style.filter  = 'alpha(opacity=100)';	
+	}
+</script>
+</body>
+</html>

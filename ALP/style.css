@@ -387,7 +387,7 @@ span a:visited {
 
 
 	/*------Media------*/
-	@media screen and (max-width:1190px) {
+	@media screen and (max-width:1199px) {
 	
 	.sidebar{
 		width: 350px;	
@@ -400,7 +400,7 @@ span a:visited {
 	
 	}
 	
-	@media screen and (max-width:570px) {
+	@media screen and (max-width:767px) {
 		
 	
 	

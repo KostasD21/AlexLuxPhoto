@@ -54,14 +54,14 @@ function initializeSlider(){
   	
 			//Calculate image's initial width and height
 			var orgWidth = tmpImg.width;
-  			var orgHeight = tmpImg.height;
+			var orgHeight = tmpImg.height;
 			var windowWidth = $(window).width();
-			
-			scaledVal = calculateScale(orgWidth,orgHeight,mainContent_width,mainContent_height,windowWidth);
-			
-			
+				
+			scaledVal = calculateDownscale(orgWidth,orgHeight,mainContent_width,mainContent_height,windowWidth);
+				
+				
 			$("#image").css({"width":scaledVal[0]+"px", "height":scaledVal[1]+"px", "margin":"auto", "position":"relative", "display":"block"});			
-			
+				
 		});
 }
 
@@ -97,7 +97,7 @@ function photo(x) {
 	var window_width = $(window).width();
 	
 	if(window_width <= 1190){	//If it's a tablet then focus on the image slider in the transition
-		window.location.assign("slider.html?img="+param+"&cat="+cat);//+"#maincontent"
+		window.location.assign("slider.html?img="+param+"&cat="+cat+"#maincontent");
 	}
 	else{
 		window.location.assign("slider.html?img="+param+"&cat="+cat);
@@ -111,71 +111,57 @@ function go_to_thumbnails(){
 }
 
 
-//Function for Scale calculation of initial image's dimensions	
-function calculateScale(orgWidth,orgHeight,mainContent_width,mainContent_height,windowWidth){
+//Function for downscale calculation of initial image's dimensions	
+function calculateDownscale(orgWidth,orgHeight,mainContent_width,mainContent_height,windowWidth){
 
 	var scaledDim = [];		
 	scaledDim[0] = 0;	//scaled width
 	scaledDim[1] = 0;	//scaled height
 
-	//Calculate Scale ratio of width
-	var ScaleRatio = mainContent_width/orgWidth;
+	//Calculate downscale ratio of width
+	var downscaleRatio = mainContent_width/orgWidth;
 	
 	//screen-width is more than 1190px
 	if (windowWidth>=1190) {
 	
-			//If scale ratio >= 1.00 then check if the scale against the height of the image is bigger
-			if(ScaleRatio >= 1){
+			//If donwscale ratio >= 1.00 then put the image as it is, in the initial width
+			if(downscaleRatio >= 1){
 				
-				//Check if Scale ratio fits in the maincontent against the height of the div
-				if(ScaleRatio <= mainContent_height/orgHeight){
-					scaledDim[0] = ScaleRatio * orgWidth;
-					scaledDim[1] = ScaleRatio * orgHeight;
+				//Check if downscale ratio fits in the maincontent against the height of the div
+				if(downscaleRatio * orgHeight <= mainContent_height){
+					scaledDim[0] = orgWidth;
+					scaledDim[1] = orgHeight;
 				}
-				//Calculate new Scale ratio by image's height
+				//Calculate new downscale ratio by image's height
 				else{
-					ScaleRatio = mainContent_height/orgHeight;
-					scaledDim[0] = ScaleRatio * orgWidth;
-					scaledDim[1] = ScaleRatio * orgHeight;
+					downscaleRatio = mainContent_height/orgHeight;
+					scaledDim[0] = downscaleRatio * orgWidth;
+					scaledDim[1] = downscaleRatio * orgHeight;
 				}
 				
 			}
 			else{	//Doesn't fit in the width of maincontent
-			
-				var Scale1 = mainContent_width/orgWidth;
-				var Scale2 = mainContent_height/orgHeight;
 				
-				if(Scale1 < Scale2){
+				downscaleRatio = mainContent_height/orgHeight;
+				scaledDim[0] = downscaleRatio * orgWidth;
+				scaledDim[1] = downscaleRatio * orgHeight;
 				
-					scaledDim[0] = Scale1 * orgWidth;
-					scaledDim[1] = Scale1 * orgHeight;
-				
-				}
-				else{
-					
-					scaledDim[0] = Scale2 * orgWidth;
-					scaledDim[1] = Scale2 * orgHeight;
-				
-				}
 			}
 			
 	}
-	else if(windowWidth<1190 && windowWidth>=768){//screen width is less than 1190px - image gets full width
+	else{//screen width is less than 1190px - image gets full width
 			
-			if(ScaleRatio >= 1){
+			if(downscaleRatio >= 1){
 				scaledDim[0] =  orgWidth;
 				scaledDim[1] =  orgHeight;
 			}
 			else{
-				scaledDim[0] = ScaleRatio * orgWidth;
-				scaledDim[1] = ScaleRatio * orgHeight;
+				scaledDim[0] = downscaleRatio * orgWidth;
+				scaledDim[1] = downscaleRatio * orgHeight;
 			}
 	}
-	else{
-		var category = getURLParameter('cat');
-		window.location.assign("../../portfolio/"+category+"/");	
-	}
 			
+	/*console.log("Dimensions of scaled image: "+scaledDim[0]+" x "+scaledDim[1]);*/
 	return scaledDim;
 }	
 	

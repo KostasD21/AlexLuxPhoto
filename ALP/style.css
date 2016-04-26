@@ -212,9 +212,13 @@ html, body {
 	width: 100%;
 }
 
-/*Prosthikes*/
-.grid { display: inline-block;}
-.grid-item { width: 32.5%; float:left;}
+
+
+
+
+
+
+
 
 
 
@@ -495,10 +499,6 @@ span a:visited {
 		.imgInt{
 			width: 99%;
 		}
-		
-		/*Prosthikes*/
-		.grid { display: block; }
-		.grid-item { width: 99%; float:left;}
 		
 		
 		}

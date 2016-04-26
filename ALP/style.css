@@ -20,14 +20,11 @@ html, body {
   	-o-background-size: cover;
   	background-size: cover;
 	
-	/*On load transition effect*/
+	
 	opacity:0;
 	transition: opacity 1s;
-	-webkit-transition: opacity 1s; /* Safari */
+	-webkit-transition: opacity 1s;  
 }
-
-
-
 
 
 
@@ -215,13 +212,9 @@ html, body {
 	width: 100%;
 }
 
-
-
-
-
-
-
-
+/*Prosthikes*/
+.grid { display: inline-block;}
+.grid-item { width: 32.5%; float:left;}
 
 
 
@@ -503,7 +496,9 @@ span a:visited {
 			width: 99%;
 		}
 		
+		/*Prosthikes*/
+		.grid { display: block; }
+		.grid-item { width: 99%; float:left;}
+		
 		
 		}
-		/*ka8etes: 710x1066
-		  orizonties: 1600x1066*/

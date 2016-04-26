@@ -11,7 +11,7 @@
 
 <link href="../style.css" rel="stylesheet" type="text/css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../../assets/js/jquery-1.11.3.min.js"></script>
 
 <style>
 
@@ -32,6 +32,8 @@
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+		
+		opacity: 1;
 	}
 
 	.sidebar nav ul li a{
@@ -42,6 +44,12 @@
 		color:#C5C5C5;
 	}
 
+
+	#maincontent{
+		opacity:0;
+		transition: opacity 1s;
+		-webkit-transition: opacity 1s;
+	}
 
 </style>
 
@@ -119,7 +127,7 @@
 </div>
 <script>
 	function loadFunc(){
-		var element = document.getElementById('mainContainer');
+		var element = document.getElementById('maincontent');
 		element.style.opacity = "1";
 		element.style.filter  = 'alpha(opacity=100)';	
 	}

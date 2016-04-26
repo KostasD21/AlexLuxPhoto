@@ -15,17 +15,24 @@ $( document ).ready(function() {
 	$('body').css('overflow', 'hidden');
 	
 	var x = $(window).width();	//viewport width
-	var y = $(window).height(); //viewport height
+	var y = $(document).height(); //viewport height
 	
 	// Set the overflow css property back to it's original value (default is auto)
-	$('body').css('overflow', 'auto');
+	if(x <= 1190){
+		$('body').css('overflow', 'auto');
+	}
+	else{
+		$('body').css('overflow', 'hidden');
+	}
 		
 	mainContent_width = 0.73*x;		
 	mainContent_height = y-100;		//10px margin-bottom(#slider) and 85px margin-top(#maincontent)
+	
+	//console.log("Dimensions of maincontent (1) : "+mainContent_width+" x "+mainContent_height);
 });
 
 function loadFunc(){
-		var element = document.getElementById('mainContainer');
+		var element = document.getElementById('maincontent');
 		element.style.opacity = "1";
 		element.style.filter  = 'alpha(opacity=100)';
 		initializeSlider();	
@@ -83,29 +90,23 @@ function photo(x) {
             break;
     }
 	
-	var image = document.getElementById('image');
 	param = parseInt(param) + x;
 	if(param > total){param = 1;}
 	if(param < 1){param = total;}
-	image.src = "../../assets/img/portfolio/"+cat+"/"+cat+""+param+".jpg";
 	
-	/*Load the dimensions of the image before loaded in the browser to change the image style*/	
-	var tmpImg = new Image();
-	tmpImg.src="../../assets/img/portfolio/"+cat+"/"+cat+""+param+".jpg"; 
-	$(tmpImg).on('load',function(){
-  		
-		var orgWidth = tmpImg.width;
-  		var orgHeight = tmpImg.height;
-		var windowWidth = $(window).width();
-		
-		scaledVal = calculateDownscale(orgWidth,orgHeight,mainContent_width,mainContent_height,windowWidth);
-			
-			
-		
-		$("#image").css({"width":scaledVal[0]+"px", "height":scaledVal[1]+"px", "margin":"auto", "position":"relative", "display":"block"});			
-					
-	});
+	var window_width = $(window).width();
 	
+	if(window_width <= 1190){	//If it's a tablet then focus on the image slider in the transition
+		window.location.assign("slider.html?img="+param+"&cat="+cat+"#maincontent");
+	}
+	else{
+		window.location.assign("slider.html?img="+param+"&cat="+cat);
+	}
+}
+
+function go_to_thumbnails(){
+	var category = getURLParameter('cat');
+	window.location.assign("../../portfolio/"+category+"/");
 }
 
 
@@ -116,11 +117,11 @@ function calculateDownscale(orgWidth,orgHeight,mainContent_width,mainContent_hei
 	scaledDim[0] = 0;	//scaled width
 	scaledDim[1] = 0;	//scaled height
 	
-	console.log("Window Width: "+windowWidth);
+	/*console.log("Window Width: "+windowWidth);
 
 	console.log("Original Dimensions of image: "+orgWidth+" x "+orgHeight);
 	
-	console.log("Dimensions of maincontent: "+mainContent_width+" x "+mainContent_height);
+	console.log("Dimensions of maincontent: "+mainContent_width+" x "+mainContent_height);*/
 
 	//Calculate downscale ratio of width
 	var downscaleRatio = mainContent_width/orgWidth;
@@ -165,25 +166,22 @@ function calculateDownscale(orgWidth,orgHeight,mainContent_width,mainContent_hei
 			}
 	}
 			
-	console.log("Dimensions of scaled image: "+scaledDim[0]+" x "+scaledDim[1]);
+	/*console.log("Dimensions of scaled image: "+scaledDim[0]+" x "+scaledDim[1]);*/
 	return scaledDim;
 }	
 	
 	
 document.onkeydown = function(e) {
-    switch (e.keyCode) {
-        case 37:
+    switch (e.keyCode) {			
+		case 37:
             photo(-1);	//Left arrow
 			break;
-        case 38:
-            break;
         case 39:
             photo(1);	//Right arrow
 			break;
-        case 40:
-            break;
 		case 27:
-			window.history.back();
+			go_to_thumbnails();
+			break;
     }
 };
 

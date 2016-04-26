@@ -11,7 +11,7 @@
 
 <link href="../../style.css" rel="stylesheet" type="text/css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../../assets/js/jquery-1.11.3.min.js"></script>
 
 <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 
@@ -38,6 +38,8 @@
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+		
+		opacity: 1;
 	}
 
 	.sidebar nav ul li a{
@@ -57,6 +59,10 @@
 	#maincontent {
 		margin-top:85px;
 		width:76%;
+		
+		opacity:0;
+		transition: opacity 1s;
+		-webkit-transition: opacity 1s; 
 	}
 	
 	/*------Media------*/
@@ -96,6 +102,7 @@
 			bottom: auto;
 			top: 30%;
 		}
+		
 	}
 </style>
 </head>
@@ -121,7 +128,7 @@
           	</ul>
         </nav>
 	</div>
-    <span id="thumbnails"><a  onClick="window.history.back()">Thumbnails</a></span>
+    <span id="thumbnails"><a  onClick="go_to_thumbnails()">Thumbnails</a></span>
     <span id="PN"><a onClick="photo(-1)">Prev</a> / <a onClick="photo(1)">Next</a></span>
   
   
@@ -135,22 +142,24 @@
       
       <div id="slider">
       
-      
+      	<div id="showSlider">
+        	
           <img id="image" alt="Alexander Lux Photography">
           
-          
           <div onClick="photo(-1)" class="left_hold">
-          		<img  class="left" src="../../assets/img/Slider/arrow_left.png" alt="left">
+          		<img  class="left" src="../../assets/img/Slider/arrow_left.png" alt="left">   
           </div>
           
           <div onClick="photo(1)" class="right_hold">
           		<img  class="right" src="../../assets/img/Slider/arrow_right.png" alt="right">
           </div>
       
-      	  <div onClick="window.history.back()" class="divclose">
+      	  <div onClick="go_to_thumbnails()" class="divclose">
           		<img class="imgclose" src="../../assets/img/Slider/close.png" alt="close">
           </div>
-          
+      	
+        </div>
+            
       </div>
       
       <!--a onClick="window.history.back()" href="" class="close">

@@ -18,7 +18,7 @@ $( document ).ready(function() {
 	var y = $(document).height(); //viewport height
 	
 	// Set the overflow css property back to it's original value (default is auto)
-	if(x <= 1190){
+	if(x <= 1199){
 		$('body').css('overflow', 'auto');
 	}
 	else{
@@ -96,8 +96,8 @@ function photo(x) {
 	
 	var window_width = $(window).width();
 	
-	if(window_width <= 1190){	//If it's a tablet then focus on the image slider in the transition
-		window.location.assign("slider.html?img="+param+"&cat="+cat);//+"#maincontent"
+	if(window_width <= 1199){	//If it's a tablet then focus on the image slider in the transition
+		window.location.assign("slider.html?img="+param+"&cat="+cat+"#maincontent");
 	}
 	else{
 		window.location.assign("slider.html?img="+param+"&cat="+cat);
@@ -121,8 +121,8 @@ function calculateScale(orgWidth,orgHeight,mainContent_width,mainContent_height,
 	//Calculate Scale ratio of width
 	var ScaleRatio = mainContent_width/orgWidth;
 	
-	//screen-width is more than 1190px
-	if (windowWidth>=1190) {
+	//screen-width is more than 1200px
+	if (windowWidth>=1200) {
 	
 			//If scale ratio >= 1.00 then check if the scale against the height of the image is bigger
 			if(ScaleRatio >= 1){
@@ -160,7 +160,7 @@ function calculateScale(orgWidth,orgHeight,mainContent_width,mainContent_height,
 			}
 			
 	}
-	else if(windowWidth<1190 && windowWidth>=768){//screen width is less than 1190px - image gets full width
+	else if(windowWidth<1200 && windowWidth>=768){//screen width is less than 1200px - image gets full width
 			
 			if(ScaleRatio >= 1){
 				scaledDim[0] =  orgWidth;

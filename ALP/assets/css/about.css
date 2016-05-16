@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*---------- about.css ----------*/
+	
+	
+	::-moz-selection {	
+    	background: blue;
+    	color: white;
+    	text-shadow: none;
+	}
+
+	::selection {			
+    	background: blue;
+    	color: white;
+    	text-shadow: none;
+	}
+	
+	#maincontent {
+		display:inline-block;
+	}
+	
+	
+	#container1 {
+		width:100%;		
+		display:inline-block;
+	}
+	
+	#imageWrapper1 {
+		max-width: 800px;
+		max-height: 1200px;
+		width: 35%;
+		position: relative;
+		display: block;	
+		margin-left: 0px;
+		float:left;
+	}
+	
+	#abouttext1 {
+		width:60%;
+		float:right;
+		margin-left:5%;
+	}
+	
+	h1{
+		text-align: center;
+		width: 100%;
+		font-weight: 400;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+		font-size: 22px;
+		/*text-transform: lowercase;*/
+		text-decoration: none;
+		font-style: normal;
+		color: black;
+		background-color: white;	
+	}
+	
+
+	p {
+		font-weight: 400;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+		font-size: 15px;
+	}
+	
+	#container2 {
+		width:100%;
+		display:inline-block;
+	}
+	
+	#imageWrapper2 {
+		max-width: 1200px;
+		max-height: 800px;
+		width: 35%;
+		position: relative;
+		display: block;
+		margin-right:1%;
+		float:right;	
+	}
+	
+	#abouttext2 {
+		width:60%;
+		float:left;
+		margin-right:4%;
+	}
+	
+	
+	
+	@media screen and (max-width:767px) {
+		#imageWrapper1 {
+			width: 99%;
+			float:left;
+		}
+		
+		#abouttext1 {
+			width:99%;
+			float:left;
+			margin-left:0%;
+		}
+		
+		#imageWrapper2 {
+			width: 99%;
+			float:left;
+		}
+		
+		#abouttext2 {
+			width:99%;
+			float:left;
+		}
+		
+		/*.navigation_menu {
+			position:relative;
+			right:auto;
+			vertical-align:center;
+			display:block;
+			float:none;
+		}
+		
+		.navigation_menu a.active {
+			position: relative;
+			left: auto;
+			text-align:center;
+			float: none;
+			margin-top: 70px;
+			vertical-align:center;
+			display:block;
+		}*/
+	}

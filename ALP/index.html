@@ -15,11 +15,45 @@
         <meta name="author" content="Alexander Lux" />
 		
         <link rel="shortcut icon" href="assets/img/faviconMB.png"> 
-        <link rel="stylesheet" type="text/css" href="assets/css/homepagelayout.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/homepageanimations.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <!--<link rel="stylesheet" type="text/css" href="assets/css/homepagelayout.css" />-->
+        <link rel="stylesheet" type="text/css" href="assets/css/animations.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/container.css" />
 		<!--<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>-->
-    </head>
+    
+	<style>
+	
+		body{
+			background: #000000;
+			overflow-y: hidden;
+			overflow-x: hidden;
+		}
+		
+		#container{
+		/*On load transition effect*/
+			opacity:0;
+			transition: opacity 1s;
+			-webkit-transition: opacity 1s;*/*Safari*/
+		}
+		
+		.sidebar{
+			position: absolute;
+		}
+	
+		#horizontal_line{
+			color: #FFFFFF;
+		}
+		
+		.sidebar nav ul li a{
+			color: #FFFFFF;
+		}
+		
+		.sidebar nav ul li a:hover{
+			color:#E2E2E2;
+		}
+	
+	</style>
+	
+	</head>
 	
 	
 	

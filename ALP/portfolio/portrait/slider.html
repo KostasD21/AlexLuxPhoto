@@ -9,7 +9,9 @@
 <title>Portrait - Alexander Lux Photography</title>
 <link rel="shortcut icon" href="../../assets/img/faviconMB.png">
 
-<link href="../../style.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/container.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/wrapper.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/slider.css" rel="stylesheet" type="text/css">
 
 <script src="../../assets/js/jquery-1.11.3.min.js"></script>
 
@@ -19,96 +21,20 @@
 
 <script src="../../assets/js/slider.js"></script> 
 
-<style>
-	
-	#mainContainer {
-		-webkit-font-smoothing: antialiased;
-		-webkit-overflow-scrolling: touch;
-		background:#FFFFFF;
-		background-color:#FFFFFF;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		
-		/*On click - no selection*/
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		
-		opacity: 1;
-	}
 
-	.sidebar nav ul li a{
-		color: #000000;
-	}	
-
-	.sidebar nav ul li a:hover{
-		color:#C5C5C5;
-	}
-	
-	.sidebar{
-		width: 22%;	
-	}
-	
-	#maincontent {
-		margin-top:85px;
-		width:76%;
-		
-		opacity: 0;
-  		transition: opacity 1s;
-  		-webkit-transition: opacity 1s;
-	}
-	
-	/*------Media------*/
-	@media screen and (max-width:1199px) {
-	
-		#horizontal_line {
-			width:350px;
-		}
-	
-		#maincontent {
-			width: 99%;
-			margin-bottom:1%;
-		}
-		
-		#slider {
-			margin-left: 0%;
-		}
-		
-		.imgclose {
-			opacity:0.1;
-		}
-		
-		
-		
-		/*for "left/right/top/bottom: auto;" ,the inherited attribute value is actually overriden*/
-		
-		#thumbnails{
-			left: auto; 
-			right: 13%;
-			bottom: auto;
-			top: 23%;
-		}
-	
-		#PN{			
-			left: auto;
-			right: 13%;
-			bottom: auto;
-			top: 30%;
-		}
-	}
-</style>
 </head>
+
+
+
+
 
 <body onload="loadFunc()">
 
+
 <div id="fullscreen">
 
-<div id="mainContainer"> <!--class="container"-->
+
+<div id="container"> <!--class="container"-->
 	<div class="sidebar"> 
     	<header id="logo">
         	<a href="../../">

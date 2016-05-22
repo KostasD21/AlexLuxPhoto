@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* * { box-sizing: border-box; } */
+
+.grid { 
+	width: 100%; 
+}
+
+.grid:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.grid-sizer,
+.grid-item {  
+	float: left;
+	width: 32.5%;
+	margin-right: 0.5%;
+	margin-bottom: 0.25%;
+}
+
+
+.grid-item  img{
+	display:block;
+	width:100%;
+}
+
+
+
+@media screen and (max-width:1199px) {
+	
+	.grid{  
+		width: 93%;
+		margin-left: 30px;
+	}
+	
+}
+
+
+@media screen and (max-width:767px) {
+	
+	.grid{  
+		width: 99%;
+		margin-left: 0px;
+	}
+	
+	.grid-item {  
+		width: 100%;
+		margin-bottom: 0.5%;
+	}
+	
+	.grid-item  a{  
+		pointer-events: none;
+		cursor: default;
+	}
+	
+}

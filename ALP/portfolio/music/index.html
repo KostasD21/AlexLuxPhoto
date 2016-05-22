@@ -11,42 +11,21 @@
 
 <link href="../../assets/css/container.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/wrapper.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/masonry.css" rel="stylesheet" type="text/css">
 
-<!-- <script src="../../assets/js/jquery-1.11.3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
- -->
-<style>
+<script src="../../assets/js/jquery-1.11.3.min.js"></script>
+<script src="../../assets/js/masonry.pkgd.min.js"></script> 
+<script src="../../assets/js/imagesloaded.pkgd.min.js"></script>
 
-	#maincontent{
-		opacity:0;
-		transition: opacity 1s;
-		-webkit-transition: opacity 1s;
-	}
-<!-- 	
-	.is-loading {
-  		background-color: black;
-  		background: url('http://www.enb.gov.hk/sites/all/modules/kanhan_AQHIbox/img/loading.gif');
-  		background-repeat:no-repeat;
-  		background-position:center center;
-	}
+<!-- <script src="masonry-docs.min.js"></script> -->
 
-	.is-broken {
-	  background: url('http://desandro.github.io/imagesloaded/assets/broken.png') no-repeat center center fixed;
-	  background-color: #be3730;
-	  width: 120px;
-	}
-
-	.is-loading img,
-	.is-broken img {
-	  opacity: 0;
-	}
- -->
-
-</style>
 
 </head>
 
-<body onLoad="loadFunc()">
+
+
+
+<body><!--onLoad="loadFunc()"-->
 
 <div id="container"> <!--class="container"-->
 	<div class="sidebar"> 
@@ -81,105 +60,86 @@
     
         
         
-			<div class="column">
+			<div class="grid"> <!--<div class="column">-->
+			
+			
+				<div class="grid-sizer"></div>
+			
             
+  
             
 
 
-                <div class="imgExt">
-                	<a href="slider.html?img=1&cat=music" class="not-active">
-                        <img src="../../assets/img/portfolio/music/music1.jpg" class="imgInt" alt="Alexander Lux Photography">
-                    </a>
+                <div class="grid-item">
+					<a href="slider.html?img=1&cat=music">
+                        <img src="../../assets/img/portfolio/music/music1.jpg">
+					</a>
                 </div>
                 
-                <div class="imgExt">
-                 	<a href="slider.html?img=4&cat=music" class="not-active">
-                        <img src="../../assets/img/portfolio/music/music4.jpg" class="imgInt" alt="Alexander Lux Photography">
-                	</a>
+                <div class="grid-item">
+					<a href="slider.html?img=2&cat=music" class="not-active">
+                        <img src="../../assets/img/portfolio/music/music2.jpg">
+					</a>
                 </div>
                 
-                <div class="imgExt">
-                	<a href="slider.html?img=8&cat=music" class="not-active">
-                        <img src="../../assets/img/portfolio/music/music8.jpg" class="imgInt" alt="Alexander Lux Photography">
-                	</a>
+                <div class="grid-item">
+					<a href="slider.html?img=3&cat=music" class="not-active">
+                        <img src="../../assets/img/portfolio/music/music3.jpg">
+					</a>
                 </div>
                 
-                <div class="imgExt">
-                    <a href="slider.html?img=10&cat=music" class="not-active">
-                        <img src="../../assets/img/portfolio/music/music10.jpg" class="imgInt" alt="Alexander Lux Photography">
-                     </a>
+                <div class="grid-item">
+					<a href="slider.html?img=4&cat=music" class="not-active">
+                        <img src="../../assets/img/portfolio/music/music4.jpg">
+					</a>
                 </div>
                 
-                
-                
-            </div>
-            
-            
-            
-            
-            <div class="column">
-            
-            
-            
-            
-            	<div class="imgExt">
-                    <a href="slider.html?img=2&cat=music" class="not-active">
-                        <img src="../../assets/img/portfolio/music/music2.jpg" class="imgInt" alt="Alexander Lux Photography">
-                     </a>
+               	<div class="grid-item">
+					<a href="slider.html?img=5&cat=music" class="not-active">
+                        <img src="../../assets/img/portfolio/music/music5.jpg">
+					</a>
                 </div>
             
-            	<div class="imgExt">
-                	<a href="slider.html?img=6&cat=music" class="not-active">
-                        <img src="../../assets/img/portfolio/music/music6.jpg" class="imgInt" alt="Alexander Lux Photography">
-                    </a>
+            	<div class="grid-item">
+					<a href="slider.html?img=6&cat=music" class="not-active">
+                        <img src="../../assets/img/portfolio/music/music6.jpg">
+					</a>
                 </div>
                 
-                <div class="imgExt">
-                	<a href="slider.html?img=9&cat=music" class="not-active">
-                        <img src="../../assets/img/portfolio/music/music9.jpg" class="imgInt" alt="Alexander Lux Photography">
-                    </a>
+                <div class="grid-item">
+					<a href="slider.html?img=7&cat=music" class="not-active">
+                        <img src="../../assets/img/portfolio/music/music7.jpg">
+					</a>
                 </div>
                 
-                <div class="imgExt">
-                    <a href="slider.html?img=11&cat=music" class="not-active">
-                        <img src="../../assets/img/portfolio/music/music11.jpg" class="imgInt" alt="Alexander Lux Photography">
-                     </a>
+                <div class="grid-item">
+					<a href="slider.html?img=8&cat=music" class="not-active">
+                        <img src="../../assets/img/portfolio/music/music8.jpg">
+					</a>
                 </div>
                 
-                
-                
-            </div> 
-            
-            
-            
-            
-            <div class="column">
-
-
-
-
-                <div class="imgExt">
-                    <a href="slider.html?img=3&cat=music" class="not-active">
-                        <img src="../../assets/img/portfolio/music/music3.jpg" class="imgInt" alt="Alexander Lux Photography">
-                     </a>
+				<div class="grid-item">
+					<a href="slider.html?img=9&cat=music" class="not-active">
+                        <img src="../../assets/img/portfolio/music/music9.jpg">
+					</a>
                 </div>
                 
-                <div class="imgExt">
-                    <a href="slider.html?img=5&cat=music" class="not-active">
-                        <img src="../../assets/img/portfolio/music/music5.jpg" class="imgInt" alt="Alexander Lux Photography">
-                     </a>
+                <div class="grid-item">
+					<a href="slider.html?img=10&cat=music" class="not-active">
+                        <img src="../../assets/img/portfolio/music/music10.jpg">
+					</a>
                 </div>
                 
-                 <div class="imgExt">
-                    <a href="slider.html?img=7&cat=music" class="not-active">
-                        <img src="../../assets/img/portfolio/music/music7.jpg" class="imgInt" alt="Alexander Lux Photography">
-                     </a>
+                <div class="grid-item">
+					<a href="slider.html?img=11&cat=music" class="not-active">
+                        <img src="../../assets/img/portfolio/music/music11.jpg">
+					</a>
                 </div>
                 
-                <div class="imgExt">
-                    <a href="slider.html?img=12&cat=music" class="not-active">
-                        <img src="../../assets/img/portfolio/music/music12.jpg" class="imgInt" alt="Alexander Lux Photography">
-                     </a>
+                <div class="grid-item">
+					<a href="slider.html?img=12&cat=music" class="not-active">
+                        <img src="../../assets/img/portfolio/music/music12.jpg">
+					</a>
                 </div>
                 
                 
@@ -191,30 +151,18 @@
 </div>
 
 <script>
-	function loadFunc(){
-		var element = document.getElementById('maincontent');
-		element.style.opacity = "1";
-		element.style.filter  = 'alpha(opacity=100)';	
-	}
-/* 	var $container = $('#maincontent');
 	
-	$(document).ready(function(e) {
-		$( ".imgExt" ).addClass("is-loading");
-		$container.imagesLoaded()
-    		.progress( onProgress );
-		
-    });
-	
-	// triggered after each item is loaded
-	function onProgress( imgLoad, image ) {
-  		// change class if the image is loaded or broken
-  		var $item_div = $( image.img ).parent().parent();
-		$item_div.removeClass('is-loading');
-  		if ( !image.isLoaded ) {
-    		$item.addClass('is-broken');
-  		}
-	}
-*/	
+	// init Masonry
+var $grid = $('.grid').masonry({
+  itemSelector: '.grid-item',
+  percentPosition: true,
+  columnWidth: '.grid-sizer'
+});
+// layout Isotope after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.masonry();
+});
+
 </script>
 </body>
 </html>
